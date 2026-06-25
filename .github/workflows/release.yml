@@ -1,0 +1,105 @@
+# Build MD -> ALL release bundles on GitHub's own runners, natively per OS.
+#
+# Each target is built on its own hardware, so no cross toolchain is ever needed
+# (Windows ARM64 in particular builds natively). Every job runs the conversion
+# test suite and an end-to-end smoke conversion to prove the output is identical
+# and functional on that OS, then bundles the binaries with a platform Chromium
+# for the General-converter PDF tier.
+#
+# Chromium sources per target:
+#   - Windows x64   : stripped ungoogled-chromium (scripts/setup-chromium.ps1)
+#   - Linux x64     : Chrome for Testing            (scripts/fetch-chromium.sh)
+#   - macOS arm64   : Chrome for Testing            (scripts/fetch-chromium.sh)
+#   - Windows ARM64 : none available -> ships lean; PDF via the pure-Rust Typst
+#                     tier (the Native converter), which needs no Chromium.
+#
+# Triggers: a version tag (vX.Y.Z) produces downloadable release assets; a manual
+# run just uploads the bundles as workflow artifacts.
+
+name: build
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    name: ${{ matrix.label }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { runner: windows-latest, label: win-x64,     os: windows, chromium: ungoogled }
+          - { runner: windows-11-arm, label: win-arm64,   os: windows, chromium: none }
+          - { runner: ubuntu-latest,  label: linux-x64,   os: linux,   chromium: cft, cft_platform: linux64 }
+          - { runner: macos-latest,   label: macos-arm64, os: macos,   chromium: cft, cft_platform: mac-arm64 }
+    runs-on: ${{ matrix.runner }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: Install Linux GUI build deps
+        if: matrix.os == 'linux'
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libgtk-3-dev libxcb-render0-dev libxcb-shape0-dev libxcb-xfixes0-dev libxkbcommon-dev libssl-dev
+
+      # Prove conversion is identical and functional on this OS.
+      - name: Conversion test suite
+        run: cargo test -p mdall-core --release
+
+      - name: Build release binaries
+        run: cargo build --release --workspace --bins
+
+      # End-to-end smoke: a document with inline + display LaTeX must convert.
+      - name: Smoke conversion (md -> html, docx)
+        shell: bash
+        run: |
+          bin="target/release/mdall-convert"
+          [ "${{ matrix.os }}" = "windows" ] && bin="$bin.exe"
+          printf '# Title\n\nInline $E=mc^2$ and a block:\n\n$$\\int_0^1 x\\,dx = \\tfrac12$$\n' > smoke.md
+          "$bin" smoke.md smoke.html
+          "$bin" smoke.md smoke.docx
+          test -s smoke.html && test -s smoke.docx && echo "smoke OK"
+
+      - name: Bundle Chromium (ungoogled, Windows x64)
+        if: matrix.chromium == 'ungoogled'
+        shell: pwsh
+        run: ./scripts/setup-chromium.ps1
+      - name: Bundle Chromium (Chrome for Testing)
+        if: matrix.chromium == 'cft'
+        shell: bash
+        run: bash scripts/fetch-chromium.sh ${{ matrix.cft_platform }}
+
+      - name: Stage bundle
+        shell: bash
+        run: |
+          out="mdall-${{ matrix.label }}"
+          mkdir -p "$out"
+          ext=""; [ "${{ matrix.os }}" = "windows" ] && ext=".exe"
+          cp "target/release/mdall$ext" "target/release/mdall-convert$ext" "target/release/mdall-mcp$ext" "$out/"
+          if [ -d chromium ]; then cp -r chromium "$out/"; fi
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: mdall-${{ matrix.label }}
+          path: mdall-${{ matrix.label }}/
+
+      - name: Package zip (Windows)
+        if: startsWith(github.ref, 'refs/tags/') && matrix.os == 'windows'
+        shell: pwsh
+        run: Compress-Archive -Path "mdall-${{ matrix.label }}/*" -DestinationPath "mdall-${{ matrix.label }}.zip"
+      - name: Package zip (Unix)
+        if: startsWith(github.ref, 'refs/tags/') && matrix.os != 'windows'
+        shell: bash
+        run: (cd "mdall-${{ matrix.label }}" && zip -r "../mdall-${{ matrix.label }}.zip" .)
+
+      - name: Attach to release
+        if: startsWith(github.ref, 'refs/tags/')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: mdall-${{ matrix.label }}.zip
