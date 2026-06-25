@@ -1,0 +1,20 @@
+/target/
+/installer/target/
+*.exe
+*.pdb
+
+# Distributable output: release bundles (dist.ps1) and the GitHub package
+# assembled by scripts/package-github.ps1 (a clean copy for manual upload).
+/dist/
+# Bundled Chromium runtime (396M, fetched by scripts/setup-chromium.ps1, not source)
+/chromium/
+# Local session backups (zips)
+/backups/
+
+# User test corpus + local conversion probe (not committed)
+/example/
+/examples/probe.rs
+/out/
+/examples/export_probe.rs
+/examples/eqcheck.rs
+/examples/typstcheck.rs
