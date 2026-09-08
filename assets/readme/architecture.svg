@@ -38,7 +38,7 @@
   <!-- Title -->
   <text x="450" y="32" font-family="'Segoe UI', system-ui, sans-serif" font-size="14" font-weight="600" fill="#9B8878" text-anchor="middle" letter-spacing="3">ARCHITECTURE</text>
 
-  <!-- -- SOURCE NODE -- -->
+  <!-- - SOURCE NODE - -->
   <rect x="30" y="155" width="120" height="110" rx="8" fill="#FFFFFF" stroke="#E0D5C4" stroke-width="1.5"/>
   <rect x="30" y="155" width="120" height="5" rx="4" fill="#C9920A"/>
   <text x="90" y="195" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700" fill="#2A1F0F" text-anchor="middle">SOURCE</text>
@@ -49,7 +49,7 @@
   <!-- Arrow Source -> Engine -->
   <line x1="152" y1="210" x2="210" y2="210" stroke="#9B8878" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-  <!-- -- CORE ENGINE -- -->
+  <!-- - CORE ENGINE - -->
   <rect x="210" y="120" width="160" height="180" rx="8" fill="#FFFFFF" stroke="#C9920A" stroke-width="1.5"/>
   <rect x="210" y="120" width="160" height="5" rx="4" fill="url(#gBlue)"/>
   <text x="290" y="150" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700" fill="#2A1F0F" text-anchor="middle">CORE ENGINE</text>
@@ -69,7 +69,7 @@
   <!-- Arrow Engine -> Formats -->
   <line x1="372" y1="210" x2="440" y2="210" stroke="#9B8878" stroke-width="1.5" marker-end="url(#arrow)"/>
 
-  <!-- -- FORMAT OUTPUTS -- -->
+  <!-- - FORMAT OUTPUTS - -->
   <!-- PDF tier 1 -->
   <rect x="440" y="50" width="145" height="70" rx="7" fill="#FFFFFF" stroke="#B07C08" stroke-width="1.5"/>
   <rect x="440" y="50" width="145" height="4" rx="3" fill="url(#gBlue)"/>
@@ -112,7 +112,7 @@
   <line x1="390" y1="225" x2="438" y2="302" stroke="#2D7A45" stroke-width="1" stroke-dasharray="4,3" opacity="0.7"/>
   <line x1="390" y1="240" x2="438" y2="370" stroke="#C9920A" stroke-width="1" stroke-dasharray="4,3" opacity="0.7"/>
 
-  <!-- -- RIGHT: OTHER FORMATS -- -->
+  <!-- - RIGHT: OTHER FORMATS - -->
   <rect x="640" y="90" width="125" height="200" rx="8" fill="#FFFFFF" stroke="#E0D5C4" stroke-width="1.5"/>
   <text x="702" y="112" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="600" fill="#9B8878" text-anchor="middle">MORE FORMATS</text>
   <line x1="660" y1="120" x2="742" y2="120" stroke="#E0D5C4" stroke-width="1"/>
@@ -130,7 +130,7 @@
   <!-- Arrow DOCX -> Other formats area -->
   <line x1="587" y1="300" x2="638" y2="250" stroke="#9B8878" stroke-width="1" stroke-dasharray="3,3" marker-end="url(#arrow)" opacity="0.5"/>
 
-  <!-- -- INSTALLER box bottom -- -->
+  <!-- - INSTALLER box bottom - -->
   <rect x="30" y="340" width="370" height="56" rx="8" fill="#FFFFFF" stroke="#E0D5C4" stroke-width="1" stroke-dasharray="5,3"/>
   <text x="215" y="362" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="600" fill="#9B8878" text-anchor="middle">DISTRIBUTION</text>
   <text x="215" y="380" font-family="'Segoe UI', monospace, sans-serif" font-size="9.5" fill="#A89684" text-anchor="middle">Rust self-extracting stub . cargo-zigbuild . x64 . arm64 . x86</text>

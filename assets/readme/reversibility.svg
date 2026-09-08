@@ -29,7 +29,7 @@
   <!-- Title -->
   <text x="450" y="30" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="600" fill="#9B8878" text-anchor="middle" letter-spacing="3">REVERSIBLE DOCX EXPORT . THE LOSSLESS CYCLE</text>
 
-  <!-- -- LEFT: MD source -- -->
+  <!-- - LEFT: MD source - -->
   <rect x="30" y="58" width="155" height="185" rx="8" fill="#FFFFFF" stroke="#C9920A" stroke-width="1.5"/>
   <rect x="30" y="58" width="155" height="5" rx="4" fill="#B07C08"/>
   <text x="107" y="83" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700" fill="#2A1F0F" text-anchor="middle">Markdown Source</text>
@@ -49,7 +49,7 @@
   <path d="M187 140 Q230 100 270 130" stroke="#C9920A" stroke-width="2" fill="none" marker-end="url(#arrowFwd)"/>
   <text x="222" y="106" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#C9920A" text-anchor="middle">export</text>
 
-  <!-- -- CENTER: DOCX -- -->
+  <!-- - CENTER: DOCX - -->
   <rect x="270" y="58" width="175" height="185" rx="8" fill="#FFFFFF" stroke="#2D7A45" stroke-width="2"/>
   <rect x="270" y="58" width="175" height="5" rx="4" fill="url(#gGreen)"/>
   <text x="357" y="83" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700" fill="#2A1F0F" text-anchor="middle">DOCX File</text>
@@ -78,7 +78,7 @@
   <path d="M447 155 Q490 105 535 130" stroke="#2D7A45" stroke-width="2" fill="none" marker-end="url(#arrowBack)"/>
   <text x="495" y="104" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#2D7A45" text-anchor="middle">re-import</text>
 
-  <!-- -- RIGHT: Recovery -- -->
+  <!-- - RIGHT: Recovery - -->
   <rect x="535" y="58" width="165" height="185" rx="8" fill="#FFFFFF" stroke="#7A5C46" stroke-width="1.5"/>
   <rect x="535" y="58" width="165" height="5" rx="4" fill="#5C4A38"/>
   <text x="617" y="83" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" font-weight="700" fill="#2A1F0F" text-anchor="middle">Recovered Source</text>
@@ -100,7 +100,7 @@
   <text x="617" y="218" font-family="'Segoe UI', system-ui, sans-serif" font-size="10" fill="#2D7A45" font-weight="700" text-anchor="middle">Lossless round-trip</text>
   <text x="617" y="230" font-family="'Segoe UI', monospace, sans-serif" font-size="8.5" fill="#A89684" text-anchor="middle">Markdown + LaTeX intact</text>
 
-  <!-- -- RIGHT: Use case box -- -->
+  <!-- - RIGHT: Use case box - -->
   <rect x="720" y="58" width="158" height="185" rx="8" fill="#FAF8F4" stroke="#E0D5C4" stroke-width="1" stroke-dasharray="5,3"/>
   <text x="799" y="82" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" font-weight="600" fill="#9B8878" text-anchor="middle">Research Workflow</text>
   <line x1="730" y1="90" x2="868" y2="90" stroke="#E0D5C4" stroke-width="1"/>
