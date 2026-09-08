@@ -1,82 +1,59 @@
-<div align="center">
-  <img src="assets/Logo.png" alt="MD -> ALL" width="360"/>
-</div>
+<p align="center">
+  <img src="brand/banner.svg" width="900" alt="MD -> ALL">
+</p>
 
-<br/>
+<p align="center">
+  <img src="brand/badges/platform.svg" alt="platform: Windows, Linux, macOS">
+  <img src="brand/badges/formats.svg" alt="export: 12 formats">
+  <img src="brand/badges/license.svg" alt="license: research use, attribution">
+  <img src="brand/badges/offline.svg" alt="runtime: no internet required">
+</p>
 
-<div align="center">
-  <strong>Write your equations once. Export everywhere. Recover everything.</strong>
-</div>
+# MD -> ALL
 
-<br/>
+<img src="brand/ornament.svg" width="15" alt=""> **MD -> ALL is a writing app for documents that contain equations.** Write or open a file, watch your formulas appear properly as you type, then save it as a PDF, a Word document, a web page and more. It looks and behaves like an ordinary word processor.
 
-## In plain words
+<img src="brand/rule.svg" width="100%" height="24" alt="">
 
-**MD -> ALL is a writing app for documents that contain equations.** Write or open a file, watch your formulas appear properly as you type, then save it as a PDF, a Word document, a web page and more. It looks and behaves like an ordinary word processor.
+<a id="overview"></a>
+<img src="brand/titles/overview.svg" height="30" alt="In plain words">
+
+<img src="brand/ornament.svg" width="15" alt=""> A self-contained scientific Markdown editor. Write documents with equations, watch them render live, and export to any format without losing a symbol.
+
+<p align="center">
+  <img src="assets/readme/hero-simple.svg" width="900" alt="Three steps: download and run, write or open a file, export and recover">
+</p>
+
+<p align="center">
+  <img src="assets/readme/editor.png" width="820" alt="The MD -> ALL editor">
+</p>
+
+*The editor: three live views, with LaTeX rendered in place.*
 
 - **No experience needed.** You do not have to code, and no technical syntax is ever forced on you.
 - **Nothing to set up.** One download for your computer (Windows, Mac or Linux). No account, no internet, no extra software to install.
 - **Your maths stays perfect.** A Word file you export can be reviewed in Word and then turned back into your editable document, with every equation intact.
 
-**How to get it:** open the [**Download**](#download) section below and click the file for your system. That is the whole setup.
-
-<div align="center">
-  <img src="assets/readme/hero-simple.svg" alt="Three steps: download and run, write or open a file, export and recover" width="100%"/>
-</div>
-
-<br/>
+**How to get it:** open the [**Download**](#install) section below and click the file for your system. That is the whole setup.
 
 > *New to GitHub? This page is only where the app is stored, so you do not need an account or any knowledge of the site. The download links below are all you need.*
 
-<br/>
-
 > **MD -> ALL** is a self-contained scientific Markdown editor with full LaTeX/KaTeX rendering and lossless multi-format export. No runtime, no install prerequisites: download one executable, run it, everything works.
-
-<br/>
-
-<div align="center">
-  <img src="assets/readme/editor.png" alt="The MD -> ALL editor" width="92%"/>
-  <br/><br/>
-  <em>The editor: three live views, with LaTeX rendered in place.</em>
-</div>
-
-<br/>
-
-## Download
-
-Latest release, self-contained (binaries plus a bundled PDF engine, ready to run):
-
-| Platform | Download |
-|---|---|
-| Windows x64 | [mdall-win-x64.zip](https://github.com/hopenmind/mdall/releases/latest/download/mdall-win-x64.zip) |
-| Linux x64 | [mdall-linux-x64.zip](https://github.com/hopenmind/mdall/releases/latest/download/mdall-linux-x64.zip) |
-| macOS (Apple Silicon) | [mdall-macos-arm64.zip](https://github.com/hopenmind/mdall/releases/latest/download/mdall-macos-arm64.zip) |
-
-Just the MCP server (headless converter, no GUI, lighter download):
-
-| Platform | Download |
-|---|---|
-| Windows x64 | [mdall-mcp-win-x64.zip](https://github.com/hopenmind/mdall/releases/latest/download/mdall-mcp-win-x64.zip) |
-| Linux x64 | [mdall-mcp-linux-x64.zip](https://github.com/hopenmind/mdall/releases/latest/download/mdall-mcp-linux-x64.zip) |
-| macOS (Apple Silicon) | [mdall-mcp-macos-arm64.zip](https://github.com/hopenmind/mdall/releases/latest/download/mdall-mcp-macos-arm64.zip) |
-
-All versions and changelogs: [github.com/hopenmind/mdall/releases](https://github.com/hopenmind/mdall/releases)
-
-<br/>
-
-## Architecture
 
 <div align="center">
   <img src="assets/readme/architecture.svg" alt="Architecture" width="100%"/>
 </div>
 
-<br/>
+<img src="brand/rule.svg" width="100%" height="24" alt="">
 
-## Reversible DOCX: The Lossless Cycle
+<a id="reversible-docx"></a>
+<img src="brand/titles/reversible-docx.svg" height="30" alt="Reversible DOCX">
 
-<div align="center">
-  <img src="assets/readme/reversibility.svg" alt="Reversibility" width="100%"/>
-</div>
+<img src="brand/ornament.svg" width="15" alt=""> DOCX export is not destructive. Every equation survives a full Word round trip and can be recovered perfectly.
+
+<p align="center">
+  <img src="assets/readme/reversibility.svg" width="900" alt="Reversibility">
+</p>
 
 The core innovation: **DOCX export is not destructive**. Every LaTeX equation is preserved in three independent redundant locations inside the file, so the original Markdown + LaTeX source can be recovered perfectly after any Word round-trip.
 
@@ -88,15 +65,25 @@ The core innovation: **DOCX export is not destructive**. Every LaTeX equation is
 
 **Workflow**: Researcher writes in MD -> ALL, exports DOCX, supervisor annotates in Word, researcher re-imports in MD -> ALL, original Markdown + all LaTeX equations recovered intact.
 
-<br/>
+<img src="brand/rule.svg" width="100%" height="24" alt="">
 
-## Export Formats
+<a id="equation-history"></a>
+<img src="brand/titles/equation-history.svg" height="30" alt="Equation History">
 
-<div align="center">
-  <img src="assets/readme/format-pipeline.svg" alt="Format bridge: any in, any out" width="100%"/>
-</div>
+<img src="brand/ornament.svg" width="15" alt=""> Every equation edit is logged locally and timestamped, so any version can be reverted in a click.
 
-<br/>
+Every equation edit is logged locally and timestamped, per document, under `%APPDATA%/MD-ALL/history/`. Toggle the **History** panel from the view bar: each equation shows its change count; expand one to see every version and **revert** to any of them in a click. The same log is exposed over MCP (`equation_history` / `equation_revert` / `equation_lint` / `equation_fix`), so an agent can audit, revert, or auto-fix equations on its own. It is the temporal companion to the reversible DOCX: that recovers the *current* source from a shared file; this keeps *every past version*, locally.
+
+<img src="brand/rule.svg" width="100%" height="24" alt="">
+
+<a id="export-formats"></a>
+<img src="brand/titles/export-formats.svg" height="30" alt="Export Formats">
+
+<img src="brand/ornament.svg" width="15" alt=""> Twelve export formats share one pipeline, from pixel-perfect PDF to plain text.
+
+<p align="center">
+  <img src="assets/readme/format-pipeline.svg" width="900" alt="Format bridge: any in, any out">
+</p>
 
 | Format | Quality | LaTeX rendering | Notes |
 |---|---|---|---|
@@ -113,9 +100,12 @@ The core innovation: **DOCX export is not destructive**. Every LaTeX equation is
 | **TXT** | basic | Unicode approximation | Plain text, always readable |
 | **SVG** | best | Vector equations | Per-equation, embeds LaTeX source |
 
-<br/>
+<img src="brand/rule.svg" width="100%" height="24" alt="">
 
-## LaTeX Support
+<a id="latex-support"></a>
+<img src="brand/titles/latex-support.svg" height="30" alt="LaTeX Support">
+
+<img src="brand/ornament.svg" width="15" alt=""> MD -> ALL accepts LaTeX exactly as researchers write it, in any delimiter, environment, or mixed notation.
 
 MD -> ALL handles LaTeX in all its forms, as written by researchers in real scientific papers:
 
@@ -145,17 +135,18 @@ h_{\text{Center\_State}} = \tanh(W_{\text{fwd}} \cdot x_t)
 
 **Normalization pipeline**: double-escaped LaTeX (`\\alpha`), markdown-escaped braces (`\{`), and mixed notation are all normalized automatically before rendering.
 
-<br/>
+<img src="brand/rule.svg" width="100%" height="24" alt="">
 
-## Editor
+<a id="editor"></a>
+<img src="brand/titles/editor.svg" height="30" alt="Editor">
 
-<div align="center">
-  <img src="assets/readme/home.png" alt="The conversion hub" width="92%"/>
-  <br/><br/>
-  <em>Open a file straight into the editor, or batch-convert from the home hub.</em>
-</div>
+<img src="brand/ornament.svg" width="15" alt=""> A full WYSIWYG editor, not a Markdown previewer. Edit the rendered document directly, or drop into a live source view, one keystroke apart.
 
-<br/>
+<p align="center">
+  <img src="assets/readme/home.png" width="820" alt="The conversion hub">
+</p>
+
+*Open a file straight into the editor, or batch-convert from the home hub.*
 
 MD -> ALL is a full WYSIWYG document editor, not a Markdown previewer. It keeps three views, always one keystroke apart:
 
@@ -180,9 +171,12 @@ Editing in the rendered view writes back to the Markdown source in real time, an
 | Open a DOCX annotated in Word | Tracked changes and comments surface in the review panel |
 | Accessibility | WCAG controls: interface scale, high contrast, reduced motion, larger targets, selectable icon set |
 
-<br/>
+<img src="brand/rule.svg" width="100%" height="24" alt="">
 
-## MCP Server (`mdall-mcp`)
+<a id="mcp-server"></a>
+<img src="brand/titles/mcp-server.svg" height="30" alt="MCP Server">
+
+<img src="brand/ornament.svg" width="15" alt=""> mdall-mcp exposes the whole conversion engine, including the lossless DOCX round trip, to any MCP client over stdio.
 
 `mdall-mcp` exposes the MD -> ALL conversion engine to any MCP client (an
 automation host that speaks the [Model Context Protocol](https://modelcontextprotocol.io))
@@ -223,6 +217,10 @@ Point any MCP-compatible client at the binary. The server speaks MCP over stdio
 | `import_to_md` | `{ input }` | Any document returned as Markdown (LaTeX preserved). |
 | `export_md` | `{ markdown, output, title?, author?, base_dir? }` | Writes Markdown to a target format; resolves relative images against `base_dir`. |
 | `recover_source` | `{ input }` | Recovers the original Markdown + LaTeX from a DOCX produced by MD -> ALL. |
+| `equation_history` | `{ input }` | Every equation's timestamped edit log (the local "git for equations"). |
+| `equation_revert` | `{ input, id, to }` | Revert an equation to a prior version (`origin` or a change `ts`); rewrites the `.md`. |
+| `equation_lint` | `{ input }` or `{ markdown }` | Flags malformed equations (unbalanced braces, mismatched `\left`/`\right`). |
+| `equation_fix` | `{ input, id? }` | Auto-corrects malformed equations and records each fix (revertible). |
 
 Paths are absolute. `convert_file` and `export_md` infer the target format from
 the output extension (`.pdf`, `.docx`, `.html`, `.typ`, `.epub`, `.odt`, `.rtf`,
@@ -255,9 +253,12 @@ MCP revision `2024-11-05`. You can drive it by hand, one JSON object per line:
 {"jsonrpc":"2.0","id":4,"method":"tools/call","params":{"name":"recover_source","arguments":{"input":"/abs/out.docx"}}}
 ```
 
-<br/>
+<img src="brand/rule.svg" width="100%" height="24" alt="">
 
-## Zero External Dependencies
+<a id="zero-deps"></a>
+<img src="brand/titles/zero-deps.svg" height="30" alt="Zero External Dependencies">
+
+<img src="brand/ornament.svg" width="15" alt=""> One file, no VC++ runtime, no .NET, no Node, no Python, no internet at runtime.
 
 MD -> ALL is fully self-contained. The end user downloads **one file**, runs it, and everything works.
 
@@ -281,9 +282,14 @@ mdall-3.0.0-x64-installer.exe   (~179 MB)
 - No external browser to install
 - No internet access at runtime
 
-<br/>
+<img src="brand/rule.svg" width="100%" height="24" alt="">
 
-## Getting Started (Development)
+<a id="build-platforms"></a>
+<img src="brand/titles/build-platforms.svg" height="30" alt="Build and Platforms">
+
+<img src="brand/ornament.svg" width="15" alt=""> Build from source with a couple of PowerShell scripts, and ship to Windows, Linux and macOS from the same CI.
+
+**Getting started, development**
 
 ```powershell
 # 1. Clone
@@ -303,9 +309,7 @@ cargo run
 .\scripts\make-installer.ps1
 ```
 
-<br/>
-
-## Platform Support
+**Platform support**
 
 | Target | Triple | Bundled PDF engine | Status |
 |---|---|---|---|
@@ -323,9 +327,14 @@ engine is selectable in-app under Options (Native or General converter).
 Windows ARM64 is on hold: the KaTeX JS engine (duktape) does not compile on
 `aarch64-pc-windows-msvc`, so that target awaits an alternative JS backend.
 
-<br/>
+<img src="brand/rule.svg" width="100%" height="24" alt="">
 
-## PDF Export: Three-Tier Cascade
+<a id="under-the-hood"></a>
+<img src="brand/titles/under-the-hood.svg" height="30" alt="Under the Hood">
+
+<img src="brand/ornament.svg" width="15" alt=""> A three-tier PDF cascade guarantees output on every platform, on top of a pure-Rust technical stack.
+
+**PDF export, three-tier cascade**
 
 ```
 Export PDF triggered
@@ -351,9 +360,7 @@ Export PDF triggered
 +---------------------------------------------+
 ```
 
-<br/>
-
-## Technical Stack
+**Technical stack**
 
 | Component | Technology |
 |---|---|
@@ -370,22 +377,52 @@ Export PDF triggered
 | Cross-compilation | `cargo-zigbuild` + Zig linker |
 | Installer | Rust self-extracting stub (payload appended to exe tail) |
 
-<br/>
+<img src="brand/rule.svg" width="100%" height="24" alt="">
 
-## License
+<a id="install"></a>
+<img src="brand/titles/install.svg" height="30" alt="Install">
 
-(c) 2024-2026 Hope 'n Mind SASU - contact@hopenmind.com
-All rights reserved. Research use permitted with attribution.
-See [LICENSE](LICENSE) and [NOTICES.md](NOTICES.md) for full terms and third-party attributions.
+<img src="brand/ornament.svg" width="15" alt=""> Download the self-contained app for your platform, or just the headless MCP server if you only need conversion.
 
-> *"Write your equations once. Export everywhere. Recover everything."*
+<p align="center">
+  <a href="https://github.com/hopenmind/mdall/releases/latest/download/mdall-win-x64.zip"><img src="brand/download-full.svg" width="300" alt="Download"></a>
+</p>
 
-<br/>
+| Platform | File |
+|---|---|
+| Windows x64 | [mdall-win-x64.zip](https://github.com/hopenmind/mdall/releases/latest/download/mdall-win-x64.zip) |
+| Linux x64 | [mdall-linux-x64.zip](https://github.com/hopenmind/mdall/releases/latest/download/mdall-linux-x64.zip) |
+| macOS (Apple Silicon) | [mdall-macos-arm64.zip](https://github.com/hopenmind/mdall/releases/latest/download/mdall-macos-arm64.zip) |
 
-<div align="center">
-  <sub>A research project by</sub>
-  <br/><br/>
-  <img src="assets/logo-hm.png" alt="Hope 'n Mind" width="150"/>
-  <br/>
-  <strong>Hope 'n Mind</strong>
-</div>
+The full app is self-contained: binaries plus a bundled PDF engine, ready to run. If you only need conversion, the headless MCP server is a lighter download:
+
+| Platform | Download |
+|---|---|
+| Windows x64 | [mdall-mcp-win-x64.zip](https://github.com/hopenmind/mdall/releases/latest/download/mdall-mcp-win-x64.zip) |
+| Linux x64 | [mdall-mcp-linux-x64.zip](https://github.com/hopenmind/mdall/releases/latest/download/mdall-mcp-linux-x64.zip) |
+| macOS (Apple Silicon) | [mdall-mcp-macos-arm64.zip](https://github.com/hopenmind/mdall/releases/latest/download/mdall-mcp-macos-arm64.zip) |
+
+All versions and changelogs: [github.com/hopenmind/mdall/releases](https://github.com/hopenmind/mdall/releases)
+
+<img src="brand/rule.svg" width="100%" height="24" alt="">
+
+<a id="limitations"></a>
+<img src="brand/titles/limitations.svg" height="30" alt="Limitations">
+
+<img src="brand/ornament.svg" width="15" alt=""> **Windows ARM64 is on hold.** The KaTeX JS engine (duktape) does not compile on aarch64-pc-windows-msvc, so that target awaits an alternative JS backend.
+
+<img src="brand/ornament.svg" width="15" alt=""> **PDF quality degrades gracefully, not silently.** When the bundled rendering engine and the pure-Rust Typst tier are both unavailable, PDF export falls back to a Unicode approximation with system fonts.
+
+<img src="brand/rule.svg" width="100%" height="24" alt="">
+
+<p align="center">[License](LICENSE) &nbsp;&middot;&nbsp; [Notices](NOTICES.md)</p>
+
+<p align="center"><sub>(c) 2024-2026 Hope 'n Mind SASU. All rights reserved. Research use permitted with attribution.</sub></p>
+
+<br>
+
+<p align="center"><sub>MD -> ALL is published by <b>Hope 'n Mind SASU</b></sub></p>
+<p align="center"><img src="assets/logo-hm.png" width="120" alt="Hope 'n Mind SASU"></p>
+<p align="center"><sub>SIREN 938 261 310 &middot; RCS Brest &middot; contact@hopenmind.com &middot; hopenmind.com</sub></p>
+
+<p align="center"><em>Write your equations once. Export everywhere. Recover everything.</em></p>
