@@ -217,7 +217,7 @@ Point any MCP-compatible client at the binary. The server speaks MCP over stdio
 | `import_to_md` | `{ input }` | Any document returned as Markdown (LaTeX preserved). |
 | `export_md` | `{ markdown, output, title?, author?, base_dir? }` | Writes Markdown to a target format; resolves relative images against `base_dir`. |
 | `recover_source` | `{ input }` | Recovers the original Markdown + LaTeX from a DOCX produced by MD -> ALL. |
-| `equation_history` | `{ input }` | Every equation's timestamped edit log (the local "git for equations"). |
+| `equation_history` | `{ input }` | Every equation's timestamped edit log (the local equation history). |
 | `equation_revert` | `{ input, id, to }` | Revert an equation to a prior version (`origin` or a change `ts`); rewrites the `.md`. |
 | `equation_lint` | `{ input }` or `{ markdown }` | Flags malformed equations (unbalanced braces, mismatched `\left`/`\right`). |
 | `equation_fix` | `{ input, id? }` | Auto-corrects malformed equations and records each fix (revertible). |
